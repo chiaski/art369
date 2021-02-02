@@ -15,3 +15,8 @@ h1{
 summary{
   padding: 1em;
 }
+
+.sasuke{
+  mix-blend-mode: darken;
+  width: 100%;
+}
