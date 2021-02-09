@@ -1,54 +1,93 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>chia codes</title>
-    
-    <link rel="stylesheet" href="https://use.typekit.net/pjg5wkd.css">
-    <link rel="stylesheet" href="styling.css" type="text/css">
-    
-  </head>
-  <body>
-  
-    <section>
+  <meta charset="UTF-8">
+  <title>chia codes</title>
+  <link rel="stylesheet" href="styling.css" type="text/css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="name">
+      chia amisola
+    </div>
+
+    <div id="time" class="time">
+      69:69
+    </div>
+  </header>
+
+  <section>
     <img class="sasuke" src="sasuke.gif" alt="sasuke">
-    
+
     <h1>hello, world!</h1>
     <p>this is chia's site for art369. i like 🍥!</p>
-      
+
+    <div id="work">
       <!-- Projects -->
-      
-      <h2>class projects</h2>
-     <ol>
-      <li>
-        Project 1
-      </li>
-      <li>
-        Project 2 (coming soon!)
-      </li>
-      <li>
-        Project 3 (coming soon!)
-      </li>
-    </ol>
-      
+
+      <div class="_block">
+        <h2>class projects</h2>
+        <ol>
+          <li>
+            Project 1
+          </li>
+          <li>
+            Project 2 (coming soon!)
+          </li>
+          <li>
+            Project 3 (coming soon!)
+          </li>
+        </ol>
+      </div>
+
       <!-- Exercises -->
-      
-    <h2>exercises</h2>
-      <ol>
-        <li><a href="exercises/top-10.html">Top 10</a></li>
-      </ol>
-      
-      <!-- Extras -->
-      
+
+      <div class="_block">
+        <h2>exercises</h2>
+        <ol>
+          <li><a href="exercises/top-10.html">Top 10</a></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Extras -->
+
     <h2>extras</h2>
-      
+
     <details>
       <summary>
-      what i am currently thinking about
+        what i am currently thinking about
       </summary>
-      nothing
+      nothing.. brain empty
     </details>
-    </section>
-    
-  </body>
-</html>
+  </section>
+
+  <script type="text/javascript">
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      // add a zero in front of numbers<10
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+      t = setTimeout(function() {
+        startTime()
+      }, 500);
+    }
+
+    startTime();
+  </script>
+
+</body></html>
