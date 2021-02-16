@@ -21,6 +21,10 @@ function timer()
   if (time <= 0)
   {
      clearInterval(counter);
+    
+    // time's up
+    window.location = 'end.html';
+    
   }
 
   $("#_time").text(time);
