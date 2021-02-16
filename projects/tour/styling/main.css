@@ -16,6 +16,17 @@ header {
 }
 footer {
   padding: 2em;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+footer .footer-navigate a {
+  padding: 1em;
+}
+footer .footer-navigate a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 25px #fff;
+  cursor: pointer;
 }
 
 iframe#window {

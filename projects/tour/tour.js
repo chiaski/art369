@@ -4,7 +4,6 @@
 
 $("iframe").load(function () {
 
-
   $(this).contents().on("mousedown, mouseup, click", function () {
     steps++;
     $("span#_steps").text(steps);
@@ -12,8 +11,13 @@ $("iframe").load(function () {
 });
 
 
+$(".footer-navigate a").click(function(){
+  steps--;
+    $("span#_steps").text(steps);
+});
+
 var time=500;
-var counter=setInterval(timer, 2000); //1000 will  run it every 1 second
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 
 function timer()
 {
