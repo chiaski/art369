@@ -3,13 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>right</title>
-  <link rel="stylesheet" href="styling/room.css" type="text/css">
+  <title>mary, mother of the church</title>
+  <link rel="stylesheet" href="../styling/room.css" type="text/css">
 
   <style type="text/css">
     body {
       background: black;
       color: white;
+      background-size: cover;
+      background-image: url(../assets/9.gif);
+      width: 100vw;
+      height: 100vh;
     }
     
     a{
@@ -25,6 +29,7 @@
     
     #room{
       text-align: center;
+      pointer-events: none;
     }
 
     input[type=submit]{
@@ -41,17 +46,7 @@
 
     
     
-    
-    
-    
-    
-  <button id="walk">so you walk</button>
-<progress id="progress" value="0" max="100">  </progress>
-    <span id="and"></span>
-    
-    
-    
-    
+
     
     
     
@@ -65,19 +60,10 @@
   
   <script type="text/javascript">
     
-    let steps = 0;
-    
-    $("#walk").click(function(e){
-    $("#and").append("and walk ");
-      steps++;
-    $("#progress").val(steps * 5);
-      
-      if(100 == $("#progress").val()){
-        window.location = '1/1.html';
-      }
-      
-});
-    
+    $('html').click(function(e) {   
+        window.location = '12.html';
+  
+ });
     
   </script>
   
