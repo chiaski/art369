@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #121212;
+  color: ghostwhite;
+  font-family: "Helvetica";
+}
+
+header {
+  padding: 2em;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+footer {
+  padding: 2em;
+}
+
+iframe#window {
+  display: block;
+  border: 1px solid ghostwhite;
+  padding: 1em;
+  margin: 2em;
+  width: 95%;
+  height: 75vh;
+  overflow-y: scroll;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=main.css.map */

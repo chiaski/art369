@@ -1,0 +1,11 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+section#room {
+  white-space: pre;
+}
+
+/*# sourceMappingURL=room.css.map */
