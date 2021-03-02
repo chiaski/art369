@@ -17,6 +17,8 @@
 
   <header>
     <a onclick="shuffleWords()">REORIENT</a>
+    /
+    <!--    <a onclick="toggleTime()">TOGGLE LIGHT</a>-->
   </header>
 
   <div id="coordinates">
@@ -31,6 +33,34 @@
     </div>
 
     <div id="points">
+
+      <div class="cursor">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+        <img src="cursor.png">
+      </div>
 
       <div class="_pt">
         <h3>A website is a world.</h3>
@@ -125,6 +155,17 @@
       });
 
 
+      $(".cursor img").each(function(index) {
+        var randPosX = Math.floor((Math.random() * bodyWidth));
+        var randPosY = Math.floor((Math.random() * bodyHeight));
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+
+        $(this).css('left', randPosX);
+        $(this).css('top', randPosY);
+
+      });
+
+
       function shuffleWords() {
         $("._pt").each(function(index) {
 
@@ -135,6 +176,10 @@
           $(this).css('left', randPosX);
           $(this).css('top', randPosY);
         });
+      }
+
+      function toggleTime() {
+
       }
 
       $(document).mousemove(function(e) {

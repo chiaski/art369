@@ -1,23 +1,41 @@
 ._pt {
   position: relative;
-  width: 250px;
+  width: 225px;
   margin: 2em;
   text-align: center;
   font-weight: 300;
   font-family: 'Editorial New';
   mix-blend-mode: difference;
 
-
-  -webkit-text-stroke-width: .5px;
-  -webkit-text-stroke-color: blue;
+  background: #fff;
+  border: 2.5px solid #000;
+  padding: .5em;
+  box-shadow: 0 0 30px;
+  /*
+-webkit-text-stroke-width: .5px;
+-webkit-text-stroke-color: blue;
+*/
 
 }
 
 ._pt:hover {
   text-shadow: 0 0 4px blue;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: blue;
   cursor: help;
+  background: black;
+  color: #fff;
+}
+
+._pt h3 {
+  border-bottom: 2.5px solid black;
+  margin-top: .25em;
+}
+
+.cursor img {
+  width: 30px;
+  display: block;
+  position: absolute;
+  mix-blend-mode: darken;
+  z-index: -999;
 }
 
 body {}
@@ -88,14 +106,15 @@ header:hover {
 #earth {
   position: fixed;
   pointer-events: none;
-  z-index: 99;
+  z-index: -99999;
   width: 100vw;
   height: 100vh;
+  background: #fff;
   background-image: url(world.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
-  mix-blend-mode: darken;
+
 }
 
 @font-face {
