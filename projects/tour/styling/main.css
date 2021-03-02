@@ -5,7 +5,7 @@
 html {
   background: black;
   color: ghostwhite;
-  font-family: "Helvetica";
+  font-family: "Times New Roman";
 }
 
 header {
@@ -14,15 +14,18 @@ header {
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+
 footer {
   padding: 2em;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+
 footer .footer-navigate a {
   padding: 1em;
 }
+
 footer .footer-navigate a:hover {
   text-decoration: underline;
   text-shadow: 0 0 25px #fff;

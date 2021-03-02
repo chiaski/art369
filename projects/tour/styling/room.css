@@ -2,10 +2,30 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
+
+  font-size: 2.4vw;
 }
 
 section#room {
   white-space: pre;
+}
+
+a {
+  cursor: e-resize;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 100;
+}
+
+input,
+input[type=button],
+button,
+select {
+  font-family: "Times New Roman";
+  padding: .25em .5em;
 }
 
 /*# sourceMappingURL=room.css.map */

@@ -1,5 +1,4 @@
-
-  var steps = 0;
+var steps = 0;
 
 
 $("iframe").load(function () {
@@ -11,26 +10,23 @@ $("iframe").load(function () {
 });
 
 
-$(".footer-navigate a").click(function(){
+$(".footer-navigate a").click(function () {
   steps++;
-    $("span#_steps").text(steps);
+  $("span#_steps").text(steps);
 });
 
 
-var time=500;
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+var time = 500;
+var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 
 
-function timer()
-{
+function timer() {
   time -= 1;
-  if (time <= 0)
-  {
-     clearInterval(counter);
-    
+  if (time <= 0) {
+    clearInterval(counter);
     // time's up
     window.location = 'end.html';
-    
+
   }
 
   $("#_time").text(time);
