@@ -11,6 +11,16 @@
       line-height: 100vh;
     }
     
+    footer{
+      position: fixed;
+      bottom: 0;
+    }
+    
+    span, a, footer{
+      display: none;
+    }
+    
+    
   </style>
 </head>
 
@@ -19,8 +29,14 @@
 
   <section>
 
-    thank you
-    for trying
+    <span class="1">and the sunlight beat</span>
+    <span class="2">on man and he knelt</span>
+    <span class="3">as jesus wept, and god</span>
+    <span class="4">forgave us</span>
+    <span class="5">for the 18th time</span>
+    
+    
+    <a href="index.html">again</a>
     
   </section>
 
@@ -34,8 +50,18 @@
   
   <script type="text/javascript">
     function autorun() {
-
+      $(".1").delay(1000).fadeIn(2000);
+      $(".2").delay(2222).fadeIn(2000);
+      $(".3").delay(4444).fadeIn(2000);
+      $(".4").delay(6666).fadeIn(2000);
+      $("a").delay(9999).fadeIn(2000);
+      $("footer").delay(12222).fadeIn(2000);
     }
+    
+    $('a').on('mouseenter',function(){
+    $('body').css( "background-color", "ghostwhite");
+})
+    
     if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
     else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
     else window.onload = autorun;

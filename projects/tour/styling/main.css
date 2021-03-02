@@ -9,14 +9,14 @@ html {
 }
 
 header {
-  padding: 2em;
+  padding: 1em 2em;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
 
 footer {
-  padding: 2em;
+  padding: 1em 2em;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -34,12 +34,9 @@ footer .footer-navigate a:hover {
 
 iframe#window {
   display: block;
-  border: 1px solid ghostwhite;
-  padding: 1em;
-  margin: 2em;
-  width: 95%;
+  border: 0;
+  width: 98%;
   height: 75vh;
-  overflow-y: scroll;
   margin: 0 auto;
 }
 

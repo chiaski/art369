@@ -5,6 +5,8 @@
   <title>tour</title>
   <link rel="stylesheet" href="styling/main.css" type="text/css">
   <style type="text/css">
+    
+    
     #intro {
       height: 100vh;
       width: 100vw;
@@ -22,6 +24,11 @@
       color: black;
       margin: 0 auto;
     }
+    
+    #container{
+      box-sizing: border-box;
+      margin: 2vw;
+    }
 
     .footer-navigate a {
       cursor: w-resize !important;
@@ -31,11 +38,26 @@
     .footer-navigate a:hover {
       text-decoration: none !important;
     }
+    
+    #static {
+    position: fixed;
+    z-index: 99999;
+      top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    background-image: url(https://uploads-ssl.webflow.com/5ffe14caec208915fe33286c/5ffeae971aacfc0607258a60_source.gif);
+    background-position: 0 0;
+    background-size: auto;
+    opacity: .1;
+      pointer-events: none;
+}
   </style>
 </head>
 
 <body>
 
+  <div id="static"></div>
 
   <div id="intro">
     <span>
@@ -45,10 +67,11 @@
   </div>
 
 
+  <div id="container">
   <header>
     <div class="header-time"><span id="_time">500</span> minutes left</div>
 
-    <div class="header-steps"><span id="_steps">0</span> steps taken</div>
+    <div class="footer-title">bisita iglesia</div>
   </header>
 
 
@@ -66,7 +89,8 @@
       <a onclick="iframe.history.go(-1)">← step back</a>
     </div>
 
-    <div class="footer-title">bisita iglesia</div>
+    
+    <div class="header-steps"><span id="_steps">0</span> steps taken</div>
 
     <!--
       
@@ -77,7 +101,8 @@
 
 
   </footer>
-
+</div>
+  
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 
   <script src="tour.js" type="text/javascript"></script>
