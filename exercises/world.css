@@ -1,9 +1,11 @@
 ._pt {
   position: relative;
   width: 250px;
+  margin: 2em;
   text-align: center;
   font-weight: 300;
   font-family: 'Editorial New';
+  mix-blend-mode: difference;
 
 
   -webkit-text-stroke-width: .5px;
@@ -20,9 +22,18 @@
 
 body {}
 
+a#back {
+  font-family: 'Editorial New';
+  text-transform: uppercase;
+  padding: .5em;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
 h1 {
   text-align: center;
-  font-size: 5em;
+  font-size: 15vw;
+  line-height: 90%;
 
   font-weight: 300;
   font-family: 'Editorial New';
@@ -37,8 +48,9 @@ h1 {
   letter-spacing: -4px;
 
   cursor: all-scroll;
-
   transform: translateY(-50%);
+
+  mix-blend-mode: difference;
 }
 
 header {
@@ -54,6 +66,9 @@ header {
   z-index: 9999;
 }
 
+header:hover {
+  cursor: e-resize;
+}
 
 #coordinates {
   position: fixed;
@@ -69,9 +84,6 @@ header {
 }
 
 
-header:hover {
-  cursor: e-resize;
-}
 
 #earth {
   position: fixed;
@@ -82,6 +94,7 @@ header:hover {
   background-image: url(world.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: center center;
   mix-blend-mode: darken;
 }
 
