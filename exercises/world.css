@@ -1,0 +1,104 @@
+._pt {
+  position: relative;
+  width: 250px;
+  text-align: center;
+  font-weight: 300;
+  font-family: 'Editorial New';
+
+
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: blue;
+
+}
+
+._pt:hover {
+  text-shadow: 0 0 4px blue;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: blue;
+  cursor: help;
+}
+
+body {}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+
+  font-weight: 300;
+  font-family: 'Editorial New';
+
+}
+
+#title {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 50%;
+  letter-spacing: -4px;
+
+  cursor: all-scroll;
+
+  transform: translateY(-50%);
+}
+
+header {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 300;
+  font-family: 'Editorial New';
+  color: blue;
+  z-index: 9999;
+}
+
+
+#coordinates {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 300;
+  font-family: 'Editorial New';
+  color: blue;
+  z-index: 9999;
+}
+
+
+header:hover {
+  cursor: e-resize;
+}
+
+#earth {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(world.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  mix-blend-mode: darken;
+}
+
+@font-face {
+  font-family: 'Editorial New';
+  src: url('EditorialNew-Medium.woff2') format('woff2'),
+    url('EditorialNew-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Editorial New';
+  src: url('EditorialNew-Light.woff2') format('woff2'),
+    url('EditorialNew-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
