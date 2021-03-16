@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+a {
+  display: inline-block;
+  min-height: 32vh;
+  background: #000;
+  min-width: 33vw;
+  padding: 0.5em;
+  overflow: hidden;
+}
+
+a iframe {
+  height: 110%;
+  width: 110%;
+  opacity: 0.8;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+a .item:hover {
+  filter: invert(1);
+}
+
+.ui-tooltip {
+  display: inline-block;
+  border: 0;
+  font-size: 4vw;
+  letter-spacing: -2px;
+  font-style: italic;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+/*# sourceMappingURL=final.css.map */

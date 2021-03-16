@@ -1,31 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-
-  font-size: 2.4vw;
+  font-size: 1.125em;
+  letter-spacing: -0.25px;
+  max-width: 100vw;
+  max-height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 section#room {
   white-space: pre;
-}
-
-a {
-  cursor: e-resize;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 100;
-}
-
-input,
-input[type=button],
-button,
-select {
-  font-family: "Times New Roman";
-  padding: .25em .5em;
 }
 
 /*# sourceMappingURL=room.css.map */

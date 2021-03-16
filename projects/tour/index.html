@@ -10,6 +10,7 @@
     #intro {
       height: 100vh;
       width: 100vw;
+      top: 0; left: 0;
       position: fixed;
       text-align: center;
       display: flex;
@@ -22,6 +23,11 @@
     #intro span {
       color: black;
       margin: 0 auto;
+    }
+    
+    #intro span em{
+      font-size: 2.5em;
+      letter-spacing: -2px;
     }
     
     #container{
@@ -41,7 +47,9 @@
     #static {
     position: fixed;
     z-index: 99999;
-      top: 0; left: 0;
+    top: 0; left: 0;
+    margin: 0;
+    padding: 0;
     width: 100vw;
     height: 100vh;
     background-color: transparent;
@@ -60,7 +68,7 @@
 
   <div id="intro">
     <span>
-      <em>bisita</em><br><br>
+      <em>bisita</em><br>
       <sub>a recollection</sub>
     </span>
   </div>
