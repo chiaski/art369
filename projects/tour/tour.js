@@ -1,6 +1,5 @@
 var steps = 0;
 
-
 $("iframe").load(function () {
 
   $(this).contents().on("mousedown, mouseup, click", function () {
@@ -16,8 +15,7 @@ $(".footer-navigate a").click(function () {
 });
 
 var lie = Math.floor(1000 + Math.random() * 9000);
-
-var time = 50;
+var time = 1000;
 var counter = setInterval(timer, 1200); //1000 will  run it every 1 second
 
 
@@ -32,7 +30,7 @@ function timer() {
     $("#_time").text(time);
   } else{
     
-lie = Math.floor(1000 + Math.random() * 9000);
+    lie = Math.floor(1000 + Math.random() * 9000);
 
   $("#_time").text(lie);
   }

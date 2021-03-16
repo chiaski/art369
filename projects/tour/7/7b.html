@@ -29,10 +29,14 @@
     }
     #room{
       text-align: center;
-      font-size: 2.5vw;
-
+      font-size: 2vw;
       line-height: 100%;
-      pointer-events: none;
+    }
+    
+    input{
+      padding: .2em;
+      font-size: 2.5vw;
+min-width: 60vw;
     }
     
   </style>
@@ -44,9 +48,9 @@
   <section id="room">
 
 
-    before we start our day
-    before we take our meal
-before we get to school
+    repeat after me:
+    
+    <input id="prayer" type="text" placeholder="to whom god's love commits me here,">
     
     
     
@@ -57,12 +61,12 @@ before we get to school
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   
   <script type="text/javascript">
-    
-    $('html').click(function(e) {   
-        window.location = '7a.html';
-  
- });
-    
+   $(document).ready(function(){
+  $("#prayer").keyup(function(){
+      if( $("#prayer").val() == "to whom god's love commits me here," )
+        window.location = '7c.html';
+  });
+});
   </script>
   
 </body>
