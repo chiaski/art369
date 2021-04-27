@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>night fishie</title>
+  <style type="text/css">
+    
+    body{
+      background: #000000;
+      color: #f4fbfc;
+    }
+    
+    footer{
+      font-family:"arial";
+      font-size: .8em;
+      padding: 1em;
+      position: absolute;
+    }
+    
+    
+    #wrapper{
+      margin: 0 auto;
+      text-align: center;
+      display: none;
+    }
+    
+    
+    @media only screen and (min-width: 1200px) {
+      
+      img:not(.a){
+        display: none;
+      }
+      
+    }
+    
+    
+    @media only screen and (min-width: 1112px) and (max-width: 1200px){
+      img:not(.b){
+        display: none;
+      }
+    }
+    
+    @media only screen and (min-width: 1057px) and (max-width: 1112px){
+      img:not(.c){
+        display: none;
+      }
+    }
+    
+    @media only screen and (min-width: 1021px) and (max-width: 1057px){
+      img:not(.d){
+        display: none;
+      }
+    }
+   
+    
+    @media only screen and (min-width: 1006px) and (max-width: 1021px){
+      img:not(.e){
+        display: none;
+      }
+    }
+    
+    @media only screen and (min-width: 985px) and (max-width: 1006px){
+      img:not(.f){
+        display: none;
+      }
+    }
+    
+    @media only screen and (min-width: 945px) and (max-width: 985px){
+      img:not(.g){
+        display: none;
+      }
+    }
+   
+    
+    @media only screen and (min-width: 902px) and (max-width: 945px){
+      img:not(.h){
+        display: none;
+      }
+    }
+    
+    @media only screen and (min-width: 839px) and (max-width: 902px){
+      img:not(.i){
+        display: none;
+      }
+    }
+   
+    @media only screen and (min-width: 761px) and (max-width: 839px){
+      img:not(.j){
+        display: none;
+      }
+    }
+   
+    @media only screen and (min-width: 669px) and (max-width: 761px){
+      img:not(.k){
+        display: none;
+      }
+    }
+   
+    @media only screen and (min-width: 614px) and (max-width: 669px){
+      img:not(.l){
+        display: none;
+      }
+    }
+   
+    @media only screen and (min-width: 554px) and (max-width: 614px){
+      img:not(.m){
+        display: none;
+      }
+    }
+   
+    @media only screen and (min-width: 521px) and (max-width: 554px){
+      img:not(.n){
+        display: none;
+      }
+    }
+    
+    @media only screen and (min-width: 441px) and (max-width: 523px){
+      img:not(.o){
+        display: none;
+      }
+    }
+  </style>
+  </head>
+  <body>
+    
+    <footer><span id="currentwidth">RESIZE YOUR BROWSER TO 1200PX </span></footer>
+    
+    <div id="wrapper">
+
+      <img src="fishing/1200.gif" class="a">
+      <img src="fishing/1112.gif" class="b">
+      <img src="fishing/1057.gif" class="c">
+      <img src="fishing/1021.gif" class="d">
+      <img src="fishing/1006.gif" class="e">
+      <img src="fishing/985.gif" class="f">
+      <img src="fishing/945.gif" class="g">
+      <img src="fishing/902.gif" class="h">
+      <img src="fishing/839.gif" class="i">
+      <img src="fishing/761.gif" class="j">
+      <img src="fishing/669.gif" class="k">
+      <img src="fishing/614.gif" class="l">
+      <img src="fishing/554.gif" class="m">
+      <img src="fishing/523.gif" class="n">
+      <img src="fishing/441.gif" class="o">
+    
+    </div>
+    
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+$(window).resize(function() {
+  var thewidth =  $(window).width();
+  
+  $("#currentwidth").text(thewidth + "PX");
+  
+  if(thewidth > 1200){
+    $("#wrapper").fadeIn("slow");
+  }
+  
+});
+      
+    </script>
+  </body>
+</html>

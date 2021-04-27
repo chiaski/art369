@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>proximities</title>
+  <link rel="stylesheet" href="styling.css" type="text/css">
+
+
+</head>
+
+<body>
+
+  <div class="cursor">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+    <img src="cursor.png">
+  </div>
+
+  <header><span class="_refresh"></span> were you</header>
+
+  <h1>proximities</h1>
+
+  <img src="https://louisedrulhe.fr/internet-atlas/img-web/global5.jpg" align="left" class="_pic">
+
+
+  <img src="https://louisedrulhe.fr/internet-atlas/img-web/global7.svg" align="right" class="_pic">
+
+
+  <p>The internet is the only shared space I know. Outside of it, I am nothingness. I am a solitary figure wandering the open web&mdash;without the immaterial web I will disappear and perish again. I am nothing without the comfort and space of all my cyberfriends. I want to hold hands and disappear. I want to be nothing in a web of something. I am thinking about vastness. Heavy things. When I <button onclick="location.reload();">refresh</button>, the world breaks down and rebuilds itself just for me, the screen, and the magic that happens between us. Wartime, peacetime, and all the spaces in between. Where cliffs bring me closer to the sky and the abyss at the same time. I haven't faced someone in ages.</p>
+
+  <img src="https://louisedrulhe.fr/internet-atlas/img-web/en-diabolo2.svg" align="left" class="_pic">
+
+  <p>I think about the web when I can't hold someone's hand. I think about the internet and am on the internet when I wonder about the rapture, the beginnings, the last bad movie, and my own loneliness. I
+    <button onclick="location.reload();">refresh</button> and I am everyone who has ever thought, been, and remembered. My essence is more whole and perceivable than the gods before me. I will never be forgotten if my footprint is
+    <button onclick="location.reload();">refresh</button>ed in people's heads every single moment.I am simultaneously perceived by everyone there ever was and nothing at all. I learn, left to digest the collaborative effort of thousands before me yet feel like nobody is ever with me. Because I am alone, I have the power to recover and rebuild this misshapen world for me.
+  </p>
+
+  <br>
+
+  <hr>
+
+  <br>
+
+  <section id="products">
+
+    <div class="extension">
+      <h2>closeness</h2>
+      <p>Experiencing a webpage should be like feeling every single person that was there before. Cyberspace comes together, at one point...</p>
+      <button onclick="funcCloseness()" class="_closeness">download</button>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="extension">
+      <h2 class="center">overwritten</h2>
+      <p>Everything that can be said has already been said. Everything that was already was. The words I repeat are nothing new.</p>
+      <button onclick="funcOverwritten()" class="_overwritten">download</button>
+    </div>
+
+    <span class="separator"></span>
+
+
+    <div class="extension">
+      <h2>keeping</h2>
+      <p>Every person makes their own mark, no one experience is ours and ours alone. The internet is a vast world we share.</p>
+      <button onclick="funcKeeping()" class="_keeping">download</button>
+    </div>
+
+
+
+
+  </section>
+
+
+  <br>
+
+  <hr>
+
+  <center>
+    <button onclick="location.reload();">refresh</button>
+  </center>
+
+  <section id="photos">
+    <img src="1.jpg">
+    <img src="2.jpg">
+    <img src="3.jpg">
+    <img src="4.jpg">
+    <img src="5.jpg">
+  </section>
+
+
+
+
+  <section id="footnotes">
+
+
+  </section>
+
+  <footer>
+    <span id="_visits"></span> came before
+  </footer>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCcq4zlHJJJuHP2lo0jrmjzksYihz150Tc",
+      authDomain: "proximities-df813.firebaseapp.com",
+      projectId: "proximities-df813",
+      storageBucket: "proximities-df813.appspot.com",
+      messagingSenderId: "184345690811",
+      appId: "1:184345690811:web:bf9a1dbb976456c3539f9e"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+
+    var database = firebase.database();
+    var presence = database.ref('presence');
+
+
+    presence.get().then((snapshot) => {
+
+      const data = snapshot.val();
+      console.log(data["presence"]);
+      let newdata = data["presence"] + 1;
+      newdata = parseInt(newdata);
+      console.log(newdata);
+      $("#_visits").text(newdata);
+
+      presence.set({
+        presence: newdata
+      });
+
+    })
+    //  
+    //  presence.on('value', (snapshot) => {
+    //    
+    //    const data = snapshot.val();
+    //    $("#_visits").text(data["presence"]);
+    //    
+    //  })
+    //  
+  </script>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    var items = document.getElementsByTagName("*");
+
+    var paragraphs = document.getElementsByTagName("p");
+
+
+
+    var refreshes = parseInt(sessionStorage.getItem('refreshes'), 10) || 0;
+
+    sessionStorage.setItem('refreshes', ++refreshes);
+
+    $('._refresh').text(refreshes);
+
+    function shuffle(array) {
+      var currentIndex = array.length,
+        temporaryValue, randomIndex;
+
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    }
+
+
+
+    function funcCloseness() {
+
+      let newpos = $(".center").position();
+
+      for (var i = items.length; i--;) {
+        let ranNum = Math.ceil(Math.random() * refreshes) * (Math.round(Math.random()) ? 1 : -1)
+        $(items[i]).css({
+          top: newpos.top + ranNum,
+          left: newpos.left + ranNum,
+          position: 'absolute'
+        });
+
+        $(".center")[0].scrollIntoView();
+      }
+
+    }
+
+
+    function funcOverwritten() {
+      var alltext = "";
+
+      for (var i = paragraphs.length; i--;) {
+        alltext += $(paragraphs[i]).text();
+      }
+      paragraphs
+
+      console.log($(paragraphs[0]).text().split("")[30]);
+
+      var shuffledtext = shuffle(alltext.split(""));
+
+      shuffledtext = shuffledtext.join("");
+
+
+      for (var i = paragraphs.length; i--;) {
+
+        let ranNum = Math.floor(Math.random() * alltext.length) + 1;
+        let ranNum2 = Math.floor(Math.random() * alltext.length) + 1;
+
+        let temp;
+
+        if (ranNum > ranNum2) {
+          temp = ranNum;
+          ranNum = ranNum2;
+          ranNum2 = temp;
+        }
+
+        $(paragraphs[i]).text(shuffledtext.substr(ranNum, ranNum2));
+      }
+
+    }
+
+
+    var bodyWidth = document.body.clientWidth
+    var bodyHeight = document.body.clientHeight;
+
+    function funcKeeping() {
+
+      $(".cursor").fadeIn("slow");
+
+      $(".cursor img").each(function(index) {
+        var randPosX = Math.floor((Math.random() * bodyWidth));
+        var randPosY = Math.floor((Math.random() * bodyHeight));
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+
+        $(this).css('left', randPosX);
+        $(this).css('top', randPosY);
+
+      });
+
+    }
+    //
+    //$('button').click(function() {
+    //    window.location.reload();
+    //})
+  </script>
+</body></html>

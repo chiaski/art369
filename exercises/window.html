@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>window</title>
+  <link rel="stylesheet" href="window.css" type="text/css">
+  </head>
+  <body>
+    
+    <div id="container">
+      
+      
+      <div id="grain"></div>
+      <div id="static"></div>
+      
+      <div id="lamplight"></div>
+      
+      <div id="switch"><button onclick="blinds();">CLOSE THE BLINDS</button> <button onclick="lights();">TURN ON THE LIGHTS</button></div>
+      
+      
+      <div id="abovewindow">
+        <div class="__blind"></div>
+        <div class="__blind"></div>
+        <div class="__blind"></div>
+        <div class="__blind"></div>
+        <div class="__blind"></div>
+        <div class="__blind"></div>
+        <div class="__blind"></div>
+        <div class="__blind"></div>
+        <div class="__blind"></div>
+        <div class="__blind"></div>
+      </div>
+      
+      <div id="window"></div>
+      <div id="window2">
+        <div id="sun"></div>
+      </div>
+    
+      <div id="subtitles">hello hello</div>
+      <div id="_subtitles">what is the sound of the world outside?</div>
+      
+      <div id="music">
+      <iframe width="560" height="315" src="http://www.youtube.com/embed/VIDEO_ID_GOES_HERE" frameborder="0" allowfullscreen id="yt" autoplay></iframe>
+      </div>
+    
+    </div>
+    
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    
+    
+    <script>
+      //       so all this website does is on load, get the current date, then make the background a color derived from that date.
+
+      //       first step is to get the current date and store that in a variable called "today"
+      var today = new Date();
+
+      // next, get the day, month, and year of the current date, and store those in variables. We have to add one to month, because getMonth will give you a number between 0 and 11, not 1 and 12, which is how we count months.
+      var day = today.getDate();
+      var d = today.getDay();
+      var month = today.getMonth() + 1;
+      var year = today.getFullYear();
+      
+      console.log(d);
+      
+      // DATE: Music by day
+      
+        var videoid = "S2ISrpNM-0s";
+      
+      switch(d){
+          
+        case 1: //jobless monday
+          videoid = "xOH-Rnq1__8";
+          break;
+          
+        case 4: //jobless thursday
+          videoid = "8paDhfGQH4E";
+          break;
+      }
+      
+      
+      
+$(".actualyoutube iframe").remove();
+$('<iframe width="420" height="315" frameborder="0" allowfullscreen></iframe>')
+    .attr("src", "http://www.youtube.com/embed/" + videoid)
+    .appendTo(".actualyoutube");
+      
+      var red = 0;
+      var blue = Math.round((month * 255) / 11);
+      var green = 255;
+
+      //       now, update the background color of the body
+    document.getElementById("window").style.backgroundColor =
+        "rgb(" + red + ", " + blue + ", " + green + ")";
+      
+      
+      setTimeout(loop_element, 4000);
+      
+      function loop_element() {
+        setInterval(add_element, 1000);
+      }
+      
+      
+      var intervalId = window.setInterval(function(){
+        $("#sun").css('top', $("#sun").position().top + 2);
+}, 1000);
+      
+        
+      function add_element() {
+      var today = new Date();
+      var n = today.getMinutes();
+      var s = today.getSeconds();
+        
+        // TIME: move div every interval
+        
+        
+        
+        // TIME: change text based on minute
+        
+        console.log(n % 10);
+        
+        switch(n % 10){
+
+          case 1:
+            $("#subtitles").text("*whrr*")
+            break;
+            
+          case 2:
+            $("#subtitles").text("~whsh~")
+            break;
+            
+          case 3:
+            $("#subtitles").text("*scrr*")
+            break;
+            
+          case 4:
+            $("#subtitles").text("~whss~")
+            break;
+            
+          case 5:
+            $("#subtitles").text("*wrr*")
+            break;
+            
+          case 6:
+            $("#subtitles").text("~whh~")
+            break;
+            
+            
+          case 7:
+            $("#subtitles").text("*whoosh*")
+            break;
+            
+          case 8:
+            $("#subtitles").text("whh")
+            break;
+            
+          case 9:
+            $("#subtitles").text("woosh")
+            break;
+            
+          case 0:
+            $("#subtitles").text("whiirrr")
+            break;
+            
+        }
+        
+      }
+      
+      function blinds(){
+        alert("closing blinds...");
+        $(".__blind").css('margin', '3px 0');
+        $(".__blind").css('height', '40px');
+      }
+      
+      function lights(){
+        alert("turning on the lights...");
+        $("body").css('background', '#ed9c84');
+        $("#lamplight").css('background', '#e66139');
+      }
+
+    </script>
+  
+  </body>
+</html>

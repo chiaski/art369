@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eeeff0;
+  font-size: 1.15em;
+  padding: 10vh 5vw;
+  line-height: 1.25em;
+}
+
+p {
+  font-size: 0.8em;
+  letter-spacing: -0.25px;
+}
+
+h1,
+h2 {
+  font-size: 1.25em;
+  font-weight: normal;
+  text-align: center;
+}
+
+
+.cursor {
+  display: none;
+}
+
+.cursor img {
+  width: 30px;
+  display: block;
+  position: absolute;
+  z-index: -999;
+  -webkit-transition: all 3s ease-in-out;
+  -moz-transition: all 3s ease-in-out;
+  -ms-transition: all 3s ease-in-out;
+  -o-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+}
+
+header {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding: 2.5vw;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding: 2.5vw;
+}
+
+section#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.extension {
+  padding: 0.25em;
+  max-width: 30%;
+}
+
+section#photos {
+  text-align: center;
+  margin: 2.5em 0;
+}
+
+section#photos img {
+  width: 220px;
+}
+
+._pic {
+  background: #eeeff0;
+}
+
+img._pic {
+  max-width: 70px;
+  background: #eeeff0;
+  mix-blend-mode: darken;
+  border: 1px solid #000;
+  margin: 0.5em;
+}
+
+/*# sourceMappingURL=styling.css.map */

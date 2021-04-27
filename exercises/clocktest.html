@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>realtime</title>
+  <style type="text/css">
+    #container {
+      padding: 1em;
+      line-height: 140%;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 1em;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <h1>Time</h1>
+    <p class="_time"></p>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="realtime.js"></script>
+
+  <script>
+    var c = 0;
+
+    var intervalId = window.setInterval(function() {
+      $("._time").append(wikipedia.slice(c, c + 1));
+      c++;
+    }, 1000);
+  </script>
+
+</body></html>
