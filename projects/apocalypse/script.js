@@ -3,6 +3,7 @@
 
 
 // SHOP, ACTIONS, WORLD EVENTS
+// Play with real-world counter
 
 function buy(item, cost) {
 
@@ -53,6 +54,15 @@ function action(what, cost) {
   console.log(what);
 
   switch (what) {
+
+    case "take":
+      log += "took time.";
+      let r = Math.floor(Math.random() * 1000) + 1;
+
+      secs -= r;
+      money += r;
+
+      break;
 
     case "quell":
 
