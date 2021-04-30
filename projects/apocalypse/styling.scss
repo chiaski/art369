@@ -6,9 +6,11 @@ body {
   margin: 5vh;
 }
 
+
+
 u {
   display: inline-block;
-  padding: 0.25em;
+  padding: .25em;
 }
 
 h1 {
@@ -37,8 +39,12 @@ h1 {
 }
 
 ._log {
+
   display: block;
+
 }
+
+// WRAPPER
 
 .wrapper {
   position: absolute;
@@ -56,16 +62,16 @@ h1 {
 }
 
 .col {
-  padding: 0.25em;
-}
-.col button {
-  margin: 1em 0 0.25em 0;
-  display: block;
+  padding: .25em;
+
+  button {
+    margin: 1em 0 .25em 0;
+    display: block;
+  }
+
 }
 
 #LOG {
   display: block;
   width: 100%;
 }
-
-/*# sourceMappingURL=styling.css.map */
