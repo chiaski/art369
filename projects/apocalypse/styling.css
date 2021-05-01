@@ -6,6 +6,17 @@ body {
   margin: 5vh;
 }
 
+button {
+  background: none;
+  border: 1px solid #fff;
+  padding: 0.5em;
+  color: #fff;
+}
+
+button:hover {
+  box-shadow: 0 0 20px #fff;
+}
+
 u {
   display: inline-block;
   padding: 0.25em;
@@ -21,43 +32,41 @@ h1 {
   position: fixed;
   width: 100%;
   top: 20vh;
+  left: 0;
   text-align: center;
   color: red;
   margin: 0;
+  padding: 0;
+}
+#CLOCK ._date {
+  margin: 0.5em;
 }
 
 ._secs {
-  font-size: 2em;
+  font-size: 3em;
   color: black;
 }
 
-#LOG {
-  max-height: 300px;
-  overflow-y: scroll;
-}
-
-._log {
-  display: block;
-}
-
-.wrapper {
+.wrapper-action {
   position: absolute;
-  height: 400px;
+  height: 60vh;
+  max-height: 500px;
   bottom: 0;
   width: 100%;
   left: 0;
+  background: black;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .col-wrapper {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 1em;
+  padding: 2.5vw;
+  margin: 0 1em;
 }
 
-.col {
-  padding: 0.25em;
-}
 .col button {
   margin: 1em 0 0.25em 0;
   display: block;
@@ -65,7 +74,26 @@ h1 {
 
 #LOG {
   display: block;
+  overflow-y: scroll;
+  padding: 2.5vw;
+  margin: 0 1em;
+  max-height: 250px;
+}
+
+.log-cover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  height: 200px;
+  background: black;
+  background: linear-gradient(0deg, black 10%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+._log {
+  display: block;
 }
 
 /*# sourceMappingURL=styling.css.map */

@@ -27,64 +27,72 @@
       <div class="_date"></div>
     </div>
 
-    <div class="wrapper-stuff">
-      <div id="STATS" class="col">
+    <div class="wrapper-action">
+      <div class="col-wrapper">
+        <div id="STATS" class="col">
 
-        <u>stats</u>
+          <u>your seconds</u>
 
-        <div class="stat">
-          your seconds: <span class="_money"></span>
-          &nbsp;&nbsp;&nbsp;
-          upgrades:
-          <span class="_upgrades"></span>
+          <div class="stat">
+            <span class="_money"></span>
+            &nbsp;&nbsp;&nbsp;
+          </div>
+
+        </div>
+
+
+        <div id="ACTIONS" class="col">
+          <u>actions</u>
+
+
+          <button onclick="action('take', 0)">
+            take time – ???
+          </button>
+
+          <button onclick="action('quell', 10)">
+            quell the timer – 10
+          </button>
+
+          <button onclick="action('punish', 5)">
+            remove time - 5
+          </button>
+
+          <button onclick="action('capture', 9999)" title="Your clock will affect all others.">
+            capture time - 9999
+          </button>
+
+        </div>
+
+
+        <div id="SHOP" class="col">
+
+          <u>wound</u>
+
+          <button onclick="buy('rate', 50)">
+            speed up – 50
+          </button>
+
+
+          <button onclick="buy('ratedown', 50)">
+            slow down – 50
+          </button>
+
+
+
         </div>
 
       </div>
 
-      <div id="SHOP" class="col">
+      <div class="log-cover"></div>
+      <div id="LOG">
+        <u>log</u>
+        <span class="_logtext"></span>
 
-        <u>shop</u>
-
-        <button onclick="buy('rate', 50)">
-          speed up – 50
-        </button>
-
-
-        <button onclick="buy('ratedown', 50)">
-          slow down – 50
-        </button>
-
-
-
-      </div>
-
-      <div id="ACTIONS" class="col">
-        <u>actions</u>
-
-
-        <button onclick="action('take', 0)">
-          take time – ???
-        </button>
-
-        <button onclick="action('quell', 10)">
-          quell the timer – 10
-        </button>
-
-        <button onclick="action('punish', 5)">
-          remove time - 5
-        </button>
 
 
       </div>
     </div>
 
-    <div id="LOG">
-
-      <u>log</u>
-
-
-
-    </div>
 
 
 
@@ -92,50 +100,10 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
+
+
   <script src="script.js"></script>
 
-  <script>
-    // fix global value for rate and time
-    // money is per session
-    var money = 100;
-    var rate = 1000; // def 1 sec
-
-    var secs = seconds_since_epoch();
-
-    // global!
-
-    var _d = new Date();
-
-    var monthNames = ["January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
-    ];
-    var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-
-    $("._date").append(_d.getMonth() + "/" + _d.getDate() + "/" + _d.getFullYear());
-
-    function seconds_since_epoch() {
-      _d = new Date();
-      return Math.floor(_d / 1000);
-    }
-
-    var c = 0;
-
-    var loop = function() {
-      secs++;
-      money++;
-      //      console.log(secs);
-      $("._secs").text(secs);
-      $("._money").text(money);
-      c++;
-      setTimeout(loop, rate);
-    }
-
-    setTimeout(loop, rate);
-
-    // BEGINNING
-    setTimeout(function() {
-      $("<div class='_log'>" + "When all the seconds are gone, time itself will end." + "</div>").appendTo("#LOG").hide().fadeIn("slow")
-    }, 2000);
-  </script>
 
 </body></html>
