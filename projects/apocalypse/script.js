@@ -2,28 +2,41 @@
 
 
 
-// GLOBAL GAME VARIABLES
-var game_values = {
+// PROGRESSION
+// arguments are unlock requirements
+
+function progression(clicks, truemoney) {
+
+  switch (truemoney) {
+
+    case 3:
+      _log("When all the seconds are gone, time itself will end.")
+      break;
+
+    case 10:
+      _log("Each second you watch on the clock is now your own.");
+      break;
+
+
+    case 20:
+      _log("If you need more time, why don't you try and take some?");
+      $("button[data-unlock='1']").fadeIn("slow");
+      break;
+
+  }
 
 }
-
-
-var messages = [
-  "When all the seconds are gone, time itself will end.",
-  "Every "
-]
-
-// PROGRESSION
-
-
 
 // GAME LOOP
 
 // fix global value for rate and time
 // money is per session
-var money = 0;
-var rate = 1000; // def 1 sec
-var clicks = 1000; // determines game progression
+
+var money = 0; // your seconds
+var _truemoney = 0; // time that has passed, never taken away
+
+var rate = 500; // def 1 sec
+var _clicks = 0; // determines game progression
 
 var secs = seconds_since_epoch();
 
@@ -52,23 +65,21 @@ var c = 0;
 var loop = function () {
   secs++;
   money++;
+  _truemoney++;
+
   //      console.log(secs);
   $("._secs").text(secs);
   $("._money").text(money);
 
   console.log("secs since: " + secs);
   updateDate(secs);
+  progression(_clicks, _truemoney);
 
   c++;
   setTimeout(loop, rate);
 }
 
 setTimeout(loop, rate);
-
-// BEGINNING
-setTimeout(function () {
-  $("<div class='_log'>" + "When all the seconds are gone, time itself will end." + "</div>").appendTo("#LOG").hide().fadeIn("slow")
-}, 2000);
 
 
 // FIREBASE
@@ -103,10 +114,21 @@ ms.get().then((snapshot) => {
 // SHOP, ACTIONS, WORLD EVENTS
 // Play with real-world counter
 
-function _log(what) {
+function _log(what, timeout) {
+
   // reverse append so we can fadein the newest item
 
-  $("<div class='_log'>" + what + "</div>").prependTo("._logtext").hide().fadeIn("slow");
+  if (timeout) {
+
+    setTimeout(function () {
+      $("<div class='_log'>" + what + "</div>").prependTo("._logtext").hide().fadeIn("slow")
+    }, timeout);
+
+  } else {
+    $("<div class='_log'>" + what + "</div>").prependTo("._logtext").hide().fadeIn("slow");
+  }
+
+
 }
 
 function buy(item, cost) {
