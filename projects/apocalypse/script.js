@@ -7,20 +7,29 @@
 
 function progression(clicks, truemoney) {
 
+  if (!clicks && !truemoney) {
+    return;
+  }
+
   switch (truemoney) {
 
     case 3:
       _log("When all the seconds are gone, time itself will end.")
       break;
 
-    case 10:
+    case 20:
       _log("Each second you watch on the clock is now your own.");
       break;
 
 
-    case 20:
+    case 60:
       _log("If you need more time, why don't you try and take some?");
       $("button[data-unlock='1']").fadeIn("slow");
+      break;
+
+    case 120:
+      _log("Eventually, you learn to punish time itself.");
+      $("button[data-unlock='2']").fadeIn("slow");
       break;
 
   }
@@ -35,7 +44,7 @@ function progression(clicks, truemoney) {
 var money = 0; // your seconds
 var _truemoney = 0; // time that has passed, never taken away
 
-var rate = 500; // def 1 sec
+var rate = 50; // def 1 sec
 var _clicks = 0; // determines game progression
 
 var secs = seconds_since_epoch();
@@ -44,12 +53,12 @@ var secs = seconds_since_epoch();
 
 var _d = new Date();
 
-function updateDate(seconds_since) {
+function updateDate(seconds_since, div) {
 
   // Date construc works in ms
   _d = new Date(seconds_since * 1000);
 
-  $("._date").text(_d.getMonth() + "/" + _d.getDate() + "/" + _d.getFullYear());
+  $(div).text(_d.getMonth() + 1 + "/" + _d.getDate() + "/" + _d.getFullYear());
 
 }
 
@@ -68,11 +77,14 @@ var loop = function () {
   _truemoney++;
 
   //      console.log(secs);
+
+  //  console.log("secs since: " + secs);
+  updateDate(secs, '._date');
+  updateDate(money, '._yourtime');
+
   $("._secs").text(secs);
   $("._money").text(money);
 
-  console.log("secs since: " + secs);
-  updateDate(secs);
   progression(_clicks, _truemoney);
 
   c++;
@@ -164,7 +176,6 @@ function buy(item, cost) {
       break;
 
 
-
   }
 
   _log(log);
@@ -181,7 +192,11 @@ function action(what, cost) {
     case "take":
       log += "took time.";
       // the counter is in milliseconds.. so the timer is huge
-      let r = Math.floor(Math.random() * 100000) + 1;
+
+      let max = 604800; // 1 week
+      let min = 86400; // 1 day
+
+      let r = Math.floor(Math.random() * (max - min) + min);
 
       secs -= r;
       money += r;

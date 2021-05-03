@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>apocalypse</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+
   <link rel="stylesheet" type="text/css" href="styling.css">
 
   <style type="text/css">
@@ -16,6 +18,8 @@
   <div id="start">
     timekeeper
   </div>
+
+  <div class="vfx-color _dimmer"></div>
 
   <div id="container">
 
@@ -38,6 +42,11 @@
             &nbsp;&nbsp;&nbsp;
           </div>
 
+          <div class="stat">
+            <span class="_yourtime"></span>
+            &nbsp;&nbsp;&nbsp;
+          </div>
+
         </div>
 
 
@@ -48,13 +57,14 @@
             take time – ???
           </button>
 
-          <button onclick="action('quell', 10)">
+          <button onclick="action('punish', 2592000)" data-unlock="2">
+            remove time - 1 month
+          </button>
+
+          <button onclick="action('quell', 10)" data-unlock="3">
             quell the timer – 10
           </button>
 
-          <button onclick="action('punish', 5)">
-            remove time - 5
-          </button>
 
           <button onclick="action('capture', 9999)" title="Your clock will affect all others.">
             capture time - 9999
@@ -68,12 +78,12 @@
           <u>wound</u>
 
           <button onclick="buy('rate', 50)">
-            speed up – 50
+            speed up – 1 year
           </button>
 
 
           <button onclick="buy('ratedown', 50)">
-            slow down – 50
+            slow down – 1 year
           </button>
 
 
