@@ -26,17 +26,17 @@ function progression(clicks, truemoney) {
       _log("When all the seconds are gone, time itself will end.")
       break;
 
-    case 20:
+    case 10:
       _log("Each second you watch on the clock is now your own.");
       break;
 
 
-    case 60:
+    case 30:
       _log("If you need more time, why don't you try and take some?");
       $("button[data-unlock='1']").fadeIn("slow");
       break;
 
-    case 120:
+    case 240:
       _log("Eventually, you learn to punish time itself.");
       $("button[data-unlock='2']").fadeIn("slow");
       $(".vfx-color").css("background", "#f5f5f5");
@@ -44,16 +44,16 @@ function progression(clicks, truemoney) {
       
     // SPEED UP TIME
       
-    case 300: 
+    case 100: 
       _log("You learn how to rush time, slowly...");
       $("button[data-unlock='4a']").fadeIn("slow");
       break;
     
-    case 305: 
+    case 105: 
       _log("Such that every tick and bit comes a little sooner...");
       break;
       
-    case 310: 
+    case 110: 
       _log("This action can be a repeated one.");
       $(".vfx-color").css("background", "hsl(0, 0%, 92%)");
       break;
@@ -99,17 +99,16 @@ function progression(clicks, truemoney) {
     // ---
       
       
-    // CAPTURE TIME
+    // WAIT LONGER
 
     case 1000: 
-      _log("You are one with the passing of all places.");
-      $("button[data-unlock='8']").fadeIn("slow");
-      $(".vfx-color").css("background", "hsl(0, 0%, 75%)");
+      _log("You align yourself with the of the world.");
+      $("button[data-unlock='7']").fadeIn("slow");
       break;
       
       
     case 1020: 
-      _log("You are one with the passing of all places.");
+      $(".vfx-color").css("background", "hsl(0, 0%, 78%)");
       break;
       
     
@@ -140,37 +139,37 @@ function progression(clicks, truemoney) {
       break;
       
     
-    case 3600:
+    case 10000:
       $(".vfx-color").css("background", "hsl(0, 0%, 40%)");
       break;
       
-    case 4000:
+    case 13000:
       $(".vfx-color").css("background", "hsl(0, 0%, 35%)");
       break;
       
       
-    case 5000:
+    case 14000:
       $(".vfx-color").css("background", "hsl(0, 0%, 30%)");
       break;
     
-    case 6000:
+    case 15000:
       $(".vfx-color").css("background", "hsl(0, 0%, 25%)");
       break;
       
       
-    case 7000:
+    case 16000:
       $(".vfx-color").css("background", "hsl(0, 0%, 20%)");
       break;
       
-    case 8000:
+    case 17000:
       $(".vfx-color").css("background", "hsl(0, 0%, 15%)");
       break;
       
-    case 9000:
+    case 18000:
       $(".vfx-color").css("background", "hsl(0, 0%, 10%)");
       break;
       
-    case 10000:
+    case 20000:
       $(".vfx-color").css("background", "hsl(0, 0%, 5%)");
       break;
   }
@@ -185,7 +184,7 @@ function progression(clicks, truemoney) {
 var money = 0; // your seconds
 var _truemoney = 0; // time that has passed, never taken away
 
-var rate = 10; // def 1 sec
+var rate = 1000; // default: 1000 / 1 sec
 var _clicks = 0; // determines game progression
 
 var secs = seconds_since_epoch();
@@ -234,6 +233,7 @@ var loop = function () {
 
 setTimeout(loop, rate);
 
+console.log("HACK: Type 'rate = 100' to speed up the timer.");
 
 // FIREBASE
 
@@ -369,13 +369,22 @@ function action(what, cost) {
       money += r;
 
       break;
-
-    case "quell":
-
+      
+    case "correct":
+      
       if (money >= cost) {
         money -= cost;
-        secs -= 500;
-        log += " silenced time..."
+
+        ms.get().then((snapshot) => {
+
+          const data = snapshot.val();
+
+          secs = parseInt(data["ms"]);
+          rate = parseInt(data["rate"]);
+
+        })
+
+        log = "You adjust the clock, fixing it up.";
         break;
 
       } else {
@@ -383,6 +392,11 @@ function action(what, cost) {
       }
 
       break;
+
+      
+      
+      break;
+
 
     case "punish":
 
@@ -397,6 +411,21 @@ function action(what, cost) {
       }
 
       break;
+      
+    case "quell":
+
+      if (money >= cost) {
+        money -= (cost / 2);
+        secs -= (3888000 * 2); // 90 days
+        log = "Time bends.";
+        break;
+
+      } else {
+        log = "Not enough seconds!";
+      }
+
+      break;
+      
 
     case "capture":
 
