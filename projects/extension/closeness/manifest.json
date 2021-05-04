@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "Closeness",
+  "version": "0.0",
+  "description": "Experiencing a webpage should be like feeling every single person that was there before. Cyberspace comes together, at one point, converging so closely...",
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["jquery.min.js", "closeness.js"]
+}]
+}

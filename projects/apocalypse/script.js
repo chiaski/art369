@@ -32,6 +32,7 @@ function progression(clicks, truemoney) {
       $("button[data-unlock='2']").fadeIn("slow");
       break;
 
+
   }
 
 }
