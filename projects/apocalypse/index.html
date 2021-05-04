@@ -15,7 +15,11 @@
 
 <body>
 
-  <div id="start">
+  <div id="end" onclick="$('#end').fadeOut('slow');">
+    <h5>Time has stilled.</h5>
+  </div>
+  
+  <div id="start" style="margin: 2em;">
     timekeeper
   </div>
 
@@ -43,7 +47,7 @@
           </div>
 
           <div class="stat">
-            <span class="_yourtime"></span>
+            your time reads <span class="_yourtime"></span>.
             &nbsp;&nbsp;&nbsp;
           </div>
 
@@ -56,9 +60,15 @@
           <button onclick="action('take', 0)" data-unlock="1">
             take time – ???
           </button>
+          
 
-          <button onclick="action('punish', 2592000)" data-unlock="2">
+          <button onclick="action('punish', 864000)" data-unlock="2">
             remove time - 1 month
+          </button>
+          
+
+          <button onclick="action('taketwo', 0)" data-unlock="8">
+            wait years – ???
           </button>
 
           <button onclick="action('quell', 10)" data-unlock="3">
@@ -71,22 +81,26 @@
 
         <div id="SHOP" class="col">
 
-          <u>wound</u>
+          <u>wound clock</u>
 
-          <button onclick="buy('rate', 50)">
+          <button onclick="buy('rateup', 31556952)" data-unlock="4a">
             speed up – 1 year
           </button>
 
 
-          <button onclick="buy('ratedown', 50)">
+          <button onclick="buy('ratedown', 31556952)" data-unlock="4b">
             slow down – 1 year
           </button>
 
 
-          <button onclick="action('capture', 9999)" title="Your clock will affect all others.">
-            capture time - 1 year
+          <button onclick="action('capture', 99999)" title="Your clock will affect all others." data-unlock="5">
+            capture time - 27 hours
           </button>
 
+          <button onclick="action('captureR', 99999999)" title="Your clock will affect all others." data-unlock="6">
+            capture rate - 3 years
+          </button>
+          
         </div>
 
       </div>

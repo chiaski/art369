@@ -33,6 +33,27 @@ h1 {
   text-align: center;
 }
 
+#end {
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: #fff;
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  align-content: center;
+  align-items: center;
+  display: none;
+}
+#end h5 {
+  font-size: 2.5em;
+  pointer-events: none;
+}
+
 #CLOCK {
   position: fixed;
   width: 100%;
@@ -42,6 +63,7 @@ h1 {
   margin: 0;
   padding: 0;
   background: #fff;
+  z-index: -1;
 }
 #CLOCK ._secs {
   font-size: 3em;
