@@ -67,13 +67,11 @@ function overwrite(count) {
         let ranNum = Math.floor(Math.random() * alltext.length) + 1;
         let ranNum2 =  Math.floor(Math.random() * count) + 1;
         
-        console.log(ranNum + " " + ranNum2);
      
        let newstr = alltext.substr(ranNum, ranNum2);
         
       $(paragraphs[i]).text(newstr);
         
-        console.log(newstr);
       }
   
   
@@ -82,7 +80,6 @@ function overwrite(count) {
 
   p.get().then((snapshot) => {
     const data = snapshot.val();
-    console.log(data[whereami]);
     let newdata = data[whereami] ? data[whereami] + 1 : 1;
     newdata = parseInt(newdata);
 

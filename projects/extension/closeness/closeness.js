@@ -25,7 +25,6 @@ console.log(whereami);
 
 
 var items = document.querySelectorAll('p, a, h2, img, div');
-console.log(items);
 
 function closeness(count) {
 
@@ -56,15 +55,9 @@ function closeness(count) {
 
 
     if ($(items[i]).length) {
-
-      //          console.log(items[i]);
-
-      //          $(items[i]).text("FUCK");
-
       let currpos = $(items[i]).position();
       let randRotate = ((Math.random() - 0.5) * 1) * count;
 
-      console.log(randRotate);
       
       if (currpos.top - ranNum < 0) {
 
@@ -96,7 +89,6 @@ function closeness(count) {
 
   presence.get().then((snapshot) => {
     const data = snapshot.val();
-    console.log(data[whereami]);
     let newdata = data[whereami] ? data[whereami] + 1 : 1;
     newdata = parseInt(newdata);
 
