@@ -32,6 +32,13 @@ function progression(clicks, truemoney) {
       $("button[data-unlock='2']").fadeIn("slow");
       break;
 
+    case 300: 
+      _log("Turning over the rickety clock, you discover an ancient dial.")
+      break;
+    
+    case 310:
+      
+      break;
 
   }
 
