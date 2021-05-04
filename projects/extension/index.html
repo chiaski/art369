@@ -72,7 +72,7 @@
       </p>
 
       
-      <button a href="closeness.zip" onclick="funcCloseness()" class="_closeness">download</button>
+      <button onclick="window.location.href='closeness.zip'; funcCloseness()" class="_closeness">download</button>
     </div>
 
     <span class="separator"></span>
@@ -80,7 +80,7 @@
     <div class="extension">
       <h2 class="center">overwritten</h2>
       <p>Everything that can be said has already been said. Everything that was already was. The words I repeat are nothing new.</p>
-      <button onclick="funcOverwritten()" class="_overwritten">download</button>
+      <button href="overwritten.zip" onclick="window.location.href='overwritten.zip'; funcOverwritten()" class="_overwritten">download</button>
     </div>
 
     <span class="separator"></span>
@@ -248,17 +248,8 @@
       for (var i = paragraphs.length; i--;) {
 
         let ranNum = Math.floor(Math.random() * alltext.length) + 1;
-        let ranNum2 = Math.floor(Math.random() * alltext.length) + 1;
 
-        let temp;
-
-        if (ranNum > ranNum2) {
-          temp = ranNum;
-          ranNum = ranNum2;
-          ranNum2 = temp;
-        }
-
-        $(paragraphs[i]).text(shuffledtext.substr(ranNum, ranNum2));
+        $(paragraphs[i]).text(shuffledtext.substr(ranNum, refreshes));
       }
 
     }
