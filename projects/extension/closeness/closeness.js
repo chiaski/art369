@@ -24,7 +24,7 @@ console.log("Everything feels so, so close.");
 console.log(whereami);
 
 
-var items = document.querySelectorAll('p, a, h2, img');
+var items = document.querySelectorAll('p, a, h2, img, div');
 console.log(items);
 
 function closeness(count) {
@@ -62,20 +62,23 @@ function closeness(count) {
       //          $(items[i]).text("FUCK");
 
       let currpos = $(items[i]).position();
-      //          console.log(currpos.top + "vs" + newpos.top);
+      let randRotate = ((Math.random() - 0.5) * 1) * count;
 
+      console.log(randRotate);
+      
       if (currpos.top - ranNum < 0) {
 
         $(items[i]).css({
           top: Math.floor(Math.random() * currpos.top),
-          position: 'absolute'
+          position: 'absolute',
+          transform: 'rotate(' + randRotate + 'deg)'
         });
 
       } else {
 
-
         $(items[i]).css({
           top: currpos.top - ranNum,
+          transform: 'rotate(' + randRotate + 'deg)',
           position: 'absolute'
         });
 

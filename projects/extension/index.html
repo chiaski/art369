@@ -67,8 +67,12 @@
 
     <div class="extension">
       <h2>closeness</h2>
-      <p>Experiencing a webpage should be like feeling every single person that was there before. Cyberspace comes together, at one point...</p>
-      <button onclick="funcCloseness()" class="_closeness">download</button>
+      <p>Experiencing a webpage should be like feeling every single person that was there before. Cyberspace comes together, at one point, converging...
+      <br>
+      </p>
+
+      
+      <button a href="closeness.zip" onclick="funcCloseness()" class="_closeness">download</button>
     </div>
 
     <span class="separator"></span>
@@ -85,13 +89,18 @@
     <div class="extension">
       <h2>keeping</h2>
       <p>Every person makes their own mark, no one experience is ours and ours alone. The internet is a vast world we share.</p>
-      <button onclick="funcKeeping()" class="_keeping">download</button>
+      <button onclick="funcKeeping()" class="_keeping" style="opacity: 0.5;">download (unavailable)</button>
     </div>
 
 
 
-
   </section>
+
+<br>
+    <center>
+    
+<small>(These extensions only store anonymized visit counters per website. Nothing else.)</small>
+    </center>
 
 
   <br>
@@ -151,7 +160,7 @@
       console.log(newdata);
       $("#_visits").text(newdata);
 
-      presence.set({
+      presence.update({
         presence: newdata
       });
 
@@ -228,7 +237,6 @@
       for (var i = paragraphs.length; i--;) {
         alltext += $(paragraphs[i]).text();
       }
-      paragraphs
 
       console.log($(paragraphs[0]).text().split("")[30]);
 

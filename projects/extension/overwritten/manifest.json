@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Overwritten",
+  "version": "0.0",
+  "description": "Everything that can be said has already been said. Everything that was already was. The words I repeat are nothing new.",
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["firebase-app.js", "firebase-database.js", "jquery.min.js", "overwritten.js"]
+}],
+  "permissions": [
+    "storage",
+    "active tab"
+  ],
+  "browser_action":{
+    "default_popup": "over.html"
+  }
+}
