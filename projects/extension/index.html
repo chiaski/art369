@@ -38,9 +38,66 @@
     <img src="cursor.png">
   </div>
 
-  <header><span class="_refresh"></span> were you</header>
+  
+  <div id="container">
+  <div class="column">
+    <div class="wrapper">
+  <section id="products">
 
+    
+    <a href=".." class="back">↙ Back</a>
+    
+    
+    <div class="heading">
+    <h1>Can you feel the internet? Can you be one with the internet? Can the mark you leave on the internet be anything more than the stuff of myth?</h1>
+      </div>
+    
+  <header><span class="_refresh"></span> were you</header>
+  
+    <div class="extension">
+      <h2>closeness <sup>extension</sup></h2>
+      <p>Experiencing a webpage should be like feeling every single person that was there before. Cyberspace comes together, at one point, converging... In closeness, each visit on a webpage brings all content and pieces closer together. Your visits are shared with all other users of the extension. You are never alone.
+      <br>
+      </p>
+
+      
+      <button onclick="window.location.href='closeness.zip'; funcCloseness()" class="_closeness">download</button>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="extension">
+      <h2 class="center">overwritten <sup>extension</sup></h2>
+      <p>Everything that can be said has already been said. Everything that was already was. The words I repeat are nothing new. Overwritten takes the contents of the page you're on from input fields, links, headings, and paragraphs –– piecing them together. As more people have visited the page you're on, things get more complex –– the webpage undecipherable, influenced by human activity, as if a piece of paper stepped over and rewritten and undone...</p>
+      <button href="overwritten.zip" onclick="window.location.href='overwritten.zip'; funcOverwritten()" class="_overwritten">download</button>
+    </div>
+
+    <span class="separator"></span>
+
+
+    <div class="extension">
+      <h2>keeping <sup>extension</sup></h2>
+      <p>Every person makes their own mark, no one experience is ours and ours alone. The internet is a vast world we share. Keeping is like an extension that lets you hold hands with other people who've visited your webpage. You see traces of the last cursor position other visitors were on for the web page you're on, little glimpses of human activity and the trails we make on the web, asif physical trails and markeres left behind...</p>
+      <button onclick="funcKeeping()" class="_keeping" style="opacity: 0.5;">download (unavailable)</button><br>
+      
+      <small>Keeping is currently broken because of database limits. 😭 Keep an eye out at <a href="https://github.com/chiaski">github.com/chiaski</a> for the fix!</small>
+    </div>
+
+
+  <footer>
+    <span id="_visits"></span> came before
+  </footer>
+    
+  </section>  
+  </div></div>
+  <div class="column">
+    <div class="wrapper">
+    
+      <div id="title" style="position: fixed">
   <h1>proximities</h1>
+        </div>
+      
+      <br><br><br><br><br>
 
   <img src="https://louisedrulhe.fr/internet-atlas/img-web/global5.jpg" align="left" class="_pic">
 
@@ -56,45 +113,13 @@
     <button onclick="location.reload();">refresh</button> and I am everyone who has ever thought, been, and remembered. My essence is more whole and perceivable than the gods before me. I will never be forgotten if my footprint is
     <button onclick="location.reload();">refresh</button>ed in people's heads every single moment.I am simultaneously perceived by everyone there ever was and nothing at all. I learn, left to digest the collaborative effort of thousands before me yet feel like nobody is ever with me. Because I am alone, I have the power to recover and rebuild this misshapen world for me.
   </p>
+      
+      <p>*Images from Louise Drulhe's Critical Atlas of the Internet.</p>
 
   <br>
 
   <hr>
 
-  <br>
-
-  <section id="products">
-
-    <div class="extension">
-      <h2>closeness</h2>
-      <p>Experiencing a webpage should be like feeling every single person that was there before. Cyberspace comes together, at one point, converging...
-      <br>
-      </p>
-
-      
-      <button onclick="window.location.href='closeness.zip'; funcCloseness()" class="_closeness">download</button>
-    </div>
-
-    <span class="separator"></span>
-
-    <div class="extension">
-      <h2 class="center">overwritten</h2>
-      <p>Everything that can be said has already been said. Everything that was already was. The words I repeat are nothing new.</p>
-      <button href="overwritten.zip" onclick="window.location.href='overwritten.zip'; funcOverwritten()" class="_overwritten">download</button>
-    </div>
-
-    <span class="separator"></span>
-
-
-    <div class="extension">
-      <h2>keeping</h2>
-      <p>Every person makes their own mark, no one experience is ours and ours alone. The internet is a vast world we share.</p>
-      <button onclick="funcKeeping()" class="_keeping" style="opacity: 0.5;">download (unavailable)</button>
-    </div>
-
-
-
-  </section>
 
 <br>
     <center>
@@ -106,7 +131,13 @@
   <br>
 
   <hr>
-
+  
+  <h3>download instructions</h3>
+  <p>Each of the projects under "Proximities" is offered as a distinct Chrome extension. Click to download your chosen extension. Unzip the folder on your local computer. On Google Chrome/Opera, go to your Settings menu and go to More Tools > Extensions. Turn on 'Developer Mode' and click 'Load Unpacked'; select the Proximities folder you just unzipped from your local computer and enjoy.</p>
+  
+  <hr>
+  
+<br><br>
   <center>
     <button onclick="location.reload();">refresh</button>
   </center>
@@ -119,17 +150,11 @@
     <img src="5.jpg">
   </section>
 
+  </div>
+  </div>
 
+  </div>
 
-
-  <section id="footnotes">
-
-
-  </section>
-
-  <footer>
-    <span id="_visits"></span> came before
-  </footer>
 
 
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
