@@ -16,11 +16,58 @@ As a designer or artist, how might you want to insert friction (or flow) into yo
 -->
   
   <style type="text/css">
+    
+    body{
+      background: #f7f6f1;
+      color:#116417;
+      font-family: "Helvetica";
+    }
+    
+    a{
+      color:#116417;
+    }
+    
+    blockquote{
+      text-align: center;
+      padding: 1em 0;
+      font-family: "Times New Roman";
+      font-size: 1.4em;
+      letter-spacing: -.05px;
+    }
+    
+    a#back{
+      color:#116417;
+      text-decoration: none;
+      padding: 1em;
+      display: block;
+    }
+    
+    a#back:hover{
+      font-weight: bold;
+    }
   
     section{
-      max-width: 80vw;
-      font-family: 'Editorial New';
       font-weight: 300;
+      line-height: 150%;
+      margin-top: -50px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      padding-bottom: 10vh;
+    }
+    
+    .container{
+      max-width: 700px;
+      padding: 1em;
+    }
+    
+    h1{
+      font-weight: normal;
+      text-align: center;
+      font-size: 3em;
+      color: transparent;
+      -webkit-text-stroke: 1.4px #116417;
+      -webkit-text-fill-color: transparent;
     }
     
     footer{
@@ -30,16 +77,7 @@ As a designer or artist, how might you want to insert friction (or flow) into yo
     }
     
     
-
-@font-face {
-  font-family: 'Editorial New';
-  src: url('EditorialNew-Light.woff2') format('woff2'),
-    url('EditorialNew-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
+    
   </style>
 
 
@@ -48,12 +86,13 @@ As a designer or artist, how might you want to insert friction (or flow) into yo
 <body>
 
 
-  <section>
     <a href="../" id="back">↙ Back</a><br>
-
+  <section>
+    
+<div class="container">
     <h1>Friction vs Flow</h1>
     
-    <blockquote>‘The more proprietary, predatory and puerile the web becomes, the more committed i am to using it in poetic and intransigent ways.’</blockquote>
+    <blockquote>"The more proprietary, predatory and puerile the web becomes, the more committed i am to using it in poetic and intransigent ways."</blockquote>
     
     <p>The web I grew up in is chaotic, whether self-made or corporate. Asian corporate sites are packed to the brim with content in every inch of your screen, as if the minimal screentime we get in internet cafes demands our attention be everywhere at once. Other spaces where Filipinos congregated were self-hosted forums, flashy gifs, IRC voice rooms, anime forums, massive digital marketplaces. The anonymity of the web gave potential for people to live a completely mirrored life in contrast to the closeted, repressive Philippines above. Our government infrastructure is also notoriously behind on data collection, leaving Filipinos free to create, discuss, rebel, protest, and shout against many dictatorships in the past decades.</p>
     
@@ -61,14 +100,14 @@ As a designer or artist, how might you want to insert friction (or flow) into yo
     
     <p>Since the west's transition to clean, minimalist web design (aside from a few brutalist e-commerce here and there), I've learned that a website can be readable and soulless. It can be chaotic and alive. It transcends any genreification that we bubble it into.</p>
     
-    <blockquote>The demand for legibility leans towards a colonial impulse of taxonomy and categorization. <a href="https://www.frieze.com/article/glitching-masters-house-legacy-russell-and-momtaza-mehri-conversation">[x]</a></blockquote>
+    <blockquote>"The demand for legibility leans towards a colonial impulse of taxonomy and categorization." <a href="https://www.frieze.com/article/glitching-masters-house-legacy-russell-and-momtaza-mehri-conversation">[x]</a></blockquote>
     
     <p>This means a necessary call for a complete rewriting of the web, a rejection of complexity for accessible re-creation. Legibility is subjective. Accessibility and inclusivity mean comprehension and filled tags. The web exists in layers, too. The editor in a different realm than the browser as its final window. We see this in different language systems, naturally different infrastructural foundations on our geography, and different cultural upbringings. Yes, the web has made communication instantaneous&mdash;but it has not made spatial geography irrelevant when it bears the weight of culture and identity behind it. Many of us are not on the web for the same purposes. If we are not able to take parts of the web and reform it to form proper dwelling places, the web is purposeless. Flow is reformation. Friction should exist only when there are no more questions left to be asked. Both are subjective, ever-changing terms that we as creators on the web will come to define ourselves.</p>
-    
+    </div>
 
-    <footer>Reading Response</footer>
 
     </div>
   
   </section>
+  
 </body></html>
